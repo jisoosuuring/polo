@@ -1,0 +1,1333 @@
+@charset "utf-8";
+@font-face {
+    font-family: 'SeoulNamsanM';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/SeoulNamsanM.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
+@font-face {
+    font-family: "LeJeuneDeck-Regular";
+    src: url("https://db.onlinewebfonts.com/t/b461b7ace66f0d83a3146b642ad9baff.eot");
+    src: url("https://db.onlinewebfonts.com/t/b461b7ace66f0d83a3146b642ad9baff.eot?#iefix")format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/b461b7ace66f0d83a3146b642ad9baff.woff2")format("woff2"),
+    url("https://db.onlinewebfonts.com/t/b461b7ace66f0d83a3146b642ad9baff.woff")format("woff"),
+    url("https://db.onlinewebfonts.com/t/b461b7ace66f0d83a3146b642ad9baff.ttf")format("truetype"),
+    url("https://db.onlinewebfonts.com/t/b461b7ace66f0d83a3146b642ad9baff.svg#LeJeuneDeck-Regular")format("svg");
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+/* 이벤트 배너 */
+.event-banner {
+    overflow: hidden;
+    width: 100%;
+    height: 30px;
+    background-color: #00274D;
+    color: #fff;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 500;
+}
+
+/* 이벤트 슬라이드 컨테이너 */
+.event-container {
+    display: flex;
+    flex-direction: column;
+    animation: slideVertical 12s linear infinite;
+}
+
+/* 슬라이드 스타일 */
+.event-slide {
+    height: 30px;
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    z-index: 501;
+}
+
+/* 세로 슬라이드 애니메이션 */
+@keyframes slideVertical {
+    0% {
+        transform: translateY(0);
+    }
+
+    25% {
+        transform: translateY(-30px);
+    }
+
+    50% {
+        transform: translateY(-60px);
+    }
+
+    75% {
+        transform: translateY(-90px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+/* 헤더 */
+.header {
+    height: 70px;
+    border-bottom: 1px solid #041E3A;
+    position: fixed;
+    top: 30px;
+    /* 이벤트 배너 아래 배치 */
+    left: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.801);
+    display: flex;
+    align-items: center;
+    z-index: 502;
+}
+
+/* 헤더 내부 레이아웃 */
+.header .inner {
+    width: 1280px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* 로고 */
+.header .logo img {
+    height: 50px;
+}
+
+.header .inner .nav {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.header .inner .nav .gnb {
+    display: flex;
+    gap: 100px;
+}
+
+.header .inner .nav .gnb>li {
+    position: relative;
+}
+
+.header .inner .nav .gnb>li .depth-01 {
+    line-height: 70px;
+    display: block;
+}
+
+.header .inner .nav .gnb>li .depth-02 {
+    position: absolute;
+    top: 70px;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.5s;
+    background-color: rgba(255, 255, 255, 0.9);
+    white-space: nowrap;
+}
+
+
+.header .inner .nav .gnb>li:hover .depth-02 {
+    opacity: 1;
+    visibility: visible;
+    z-index: 506;
+}
+
+
+/* depth-02 내부 항목 */
+.header .inner .nav .gnb>li .depth-02 li a {
+    display: block;
+    padding: 8px 16px;
+}
+
+
+
+/* 헤더 오른쪽 아이콘 */
+.header-icons {
+    display: flex;
+    gap: 30px;
+    margin-right: 80px;
+}
+
+.header-icons a img {
+    width: 20px;
+    height: 20px;
+}
+
+
+
+
+
+
+
+/* Swiper 슬라이드 */
+.mySwiper {
+    top: 100px;
+    position: relative;
+    /* 텍스트와 버튼을 슬라이드 내에 배치 */
+
+}
+
+.mySwiper img {
+    height: 800px;
+
+
+}
+
+
+
+
+/* POLO SWEATER 섹션 */
+.section {
+    position: relative;
+    width: 100%;
+
+
+}
+
+
+
+.section .text h2 {
+    text-align: center;
+    font-size: 40px;
+    margin-top: 150px;
+    margin-bottom: -30px;
+    position: relative;
+    /* 위치 조정 */
+    font-family: 'SeoulNamsanM';
+}
+
+/* h3를 앞에 나오게 설정 */
+.section .text h3 {
+    position: relative;
+    /* position 속성 추가 */
+    color: white;
+    font-size: 50px;
+    z-index: 5;
+    /* h3 요소가 image1보다 앞에 오도록 z-index 값 증가 */
+    top: 350px;
+    left: 50px;
+    font-family: "LeJeuneDeck-Regular";
+}
+
+.section .text h4 {
+    position: relative;
+    /* position 속성 추가 */
+    color: white;
+    font-size: 50px;
+    z-index: 5;
+    /* h4 요소가 image1보다 앞에 오도록 z-index 값 증가 */
+    top: 580px;
+    /* 배경 이미지에서 더 아래로 이동 */
+    left: 1400px;
+    font-family: "LeJeuneDeck-Regular";
+}
+/* 배경 이미지 설정 */
+.background {
+    position: relative;
+    width: 100%;
+    height: 800px;
+    background-image: url('/html/img/여성폴로배경.png');
+    background-size: cover;
+    background-position: center;
+    z-index: 50;
+    margin-top: 50px;
+}
+
+/* 이미지 래퍼 - 이미지 오버플로우 숨김 처리 */
+.image-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 2;
+}
+
+/* 이미지 컨테이너 */
+.image-container {
+    position: relative;
+    display: block;
+}
+
+/* 이미지 부모 영역 */
+.image-parent {
+    position: absolute;
+    overflow: hidden;  /* 부모 영역을 넘지 않게 숨기기 */
+}
+
+/* 첫 번째 이미지 위치 및 크기 */
+.image1-parent {
+    top: 30px;
+    left: 200px;
+    width: 525px;
+    height: 725px;
+}
+
+.image1 {
+    object-fit: cover;
+    transition: transform 0.7s ease;
+}
+
+.image1:hover {
+    transform: scale(1.5);
+}
+
+/* 두 번째 이미지 위치 및 크기 */
+.image2-parent {
+    top: 200px;
+    left: 1000px;
+    width: 450px;
+    height: 550px;
+}
+
+.image2 {
+    object-fit: cover;
+    transition: transform 0.7s ease;
+}
+
+.image2:hover {
+    transform: scale(1.5);
+}
+
+/* 세 번째 이미지 위치 및 크기 */
+.image3-parent {
+    top: 100px;
+    left: 1400px;
+    width: 450px;
+    height: 550px;
+}
+
+.image3 {
+    object-fit: cover;
+    transition: transform 0.7s ease;
+}
+
+.image3:hover {
+    transform: scale(1.5);
+}
+
+
+
+/* h2 스타일 */
+.mySwiper2 .swiper-slide h2 {
+    font-size: 18px;
+    /* 글꼴 크기 */
+    color: #041E3A;
+    /* 텍스트 색상 */
+    font-weight: 600;
+
+}
+
+/* span 스타일 */
+.mySwiper2 .swiper-slide span {
+    font-size: 14px;
+    /* 글꼴 크기 */
+    color: #9b9b9b;
+    /* 연한 회색 */
+}
+
+/* p 스타일 */
+.mySwiper2 .swiper-slide p {
+    margin-top: 10px;
+    font-size: 20px;
+    /* 글꼴 크기 */
+    color: #041E3A;
+    /* 텍스트 색상 */
+    font-weight: 600;
+    /* 두꺼운 글꼴 */
+    display: flex;
+    /* 텍스트와 원형을 한 줄로 배치 */
+    align-items: center;
+    /* 수직 정렬 */
+}
+
+
+
+
+
+.mySwiper2 .swiper-slide a:hover {
+    text-decoration: underline;
+    /* 링크에 마우스를 올리면 밑줄 */
+}
+
+
+
+/* 반응형 */
+@media (max-width: 1024px) {
+    .nav .gnb {
+        gap: 20px;
+    }
+
+    .header {
+        padding: 15px 20px;
+    }
+
+    .logo img {
+        height: 32px;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav .gnb {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .header-icons {
+        gap: 10px;
+    }
+}
+
+.mySwiper2 {
+    margin: 50px 0;
+
+}
+
+.mySwiper2 img {
+    width: 340px;
+    height: 427px;
+
+}
+
+
+/* 섹션 가운데 정렬 */
+.section-02 {
+    text-align: center;
+    /* 텍스트 가운데 정렬 */
+
+}
+
+.section-02 .image-container-02 {
+    display: inline-block;
+    /* 이미지 컨테이너를 inline-block으로 만들어 가운데 정렬 */
+    margin-top: 20px;
+}
+
+.section-02 .image {
+    width: 1920px;
+    height: 800px;
+}
+
+.section-02 h2 {
+    text-align: center;
+    font-size: 40px;
+    margin-top: 50px;
+    font-family: 'SeoulNamsanM';
+}
+
+
+
+/* 프로그레스바 기본 색상 강제 적용 */
+.swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
+    background: #00274D !important;
+}
+
+
+/* 기본 상태 색상 */
+.swiper-button-next,
+.swiper-button-prev {
+    color: white !important;
+    /* 기본 검정색 */
+}
+
+/* 호버 상태 색상 */
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+    color: #064483 !important;
+    /* 기본 검정색 */
+}
+
+
+/* Swiper 페이지네이션 색상 변경 */
+.swiper-pagination-bullet {
+    background-color: #041e3a !important;
+}
+
+
+
+
+/* 섹션 가운데 정렬 */
+.section-03 {
+    text-align: center;
+    /* 텍스트 가운데 정렬 */
+
+}
+
+.section-03 .image-container-03 {
+    display: inline-block;
+    /* 이미지 컨테이너를 inline-block으로 만들어 가운데 정렬 */
+    margin-top: 20px;
+}
+
+.section-03 .image {
+    width: 1920px;
+    height: 800px;
+}
+
+.section-03 h2 {
+    text-align: center;
+    font-size: 40px;
+    margin-top: 50px;
+    font-family: 'SeoulNamsanM';
+}
+
+.circle-container {
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+.color-circle {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    margin-top: 10px;
+    margin-right: 7px;
+    background-size: cover;
+    /* 이미지가 원 안에 꽉 차도록 설정 */
+    background-position: center;
+    /* 이미지가 중앙에 위치하도록 설정 */
+    border: 1px solid black;
+    margin-left: -2px;
+}
+
+
+.color-circle.one {
+    background-image: url('/html/img/1-1.avif');
+}
+
+.color-circle.two {
+    background-image: url('/html/img/1-2.avif');
+}
+
+.color-circle.three {
+    background-image: url('/html/img/1-3.jpg');
+}
+
+.color-circle.four {
+    background-image: url('/html/img/1-4.webp');
+}
+
+.color-circle.five {
+    background-image: url('/html/img/1.5.webp');
+}
+
+.color-circle.six {
+    background-image: url('/html/img/1-6.webp');
+}
+
+.color-circle.seven {
+    background-image: url('/html/img/1-7.jpg');
+}
+
+.color-circle.eight {
+    background-image: url('/html/img/1-1.avif');
+}
+
+.color-circle.nine {
+    background-image: url('/html/img/1-8.avif');
+}
+
+
+.circle-container2 {
+    display: flex;
+    flex-wrap: wrap;
+
+
+}
+
+.circle-container2 .color-circle.one {
+    background-image: url('/html/img/2-1.avif');
+}
+
+.circle-container2 .color-circle.two {
+    background-image: url('/html/img/2-2.avif');
+}
+
+.circle-container2 .color-circle.three {
+    background-image: url('/html/img/2-3.avif');
+}
+
+.circle-container2 .color-circle.four {
+    background-image: url('/html/img/2-4.avif');
+}
+
+.circle-container2 .color-circle.five {
+    background-image: url('/html/img/2-5.avif');
+}
+
+.circle-container2 .color-circle.six {
+    background-image: url('/html/img/2-6.avif');
+}
+
+.circle-container2 .color-circle.seven {
+    background-image: url('/html/img/2-7.avif');
+}
+
+.circle-container2 .color-circle.eight {
+    background-image: url('/html/img/2-8.avif');
+}
+
+
+.circle-container3 {
+    display: flex;
+    flex-wrap: wrap;
+
+
+}
+
+.circle-container3 .color-circle.one {
+    background-image: url('/html/img/3-1.avif');
+}
+
+.circle-container3 .color-circle.two {
+    background-image: url('/html/img/3-2.avif');
+}
+
+.circle-container3 .color-circle.three {
+    background-image: url('/html/img/3-3.avif');
+}
+
+.circle-container3 .color-circle.four {
+    background-image: url('/html/img/3-4.avif');
+}
+
+.circle-container3 .color-circle.five {
+    background-image: url('/html/img/3-5.webp');
+}
+
+.circle-container3 .color-circle.six {
+    background-image: url('/html/img/3-6.webp');
+}
+
+.circle-container3 .color-circle.seven {
+    background-image: url('/html/img/3-7.webp');
+}
+
+.circle-container3 .color-circle.eight {
+    background-image: url('/html/img/3-8.webp');
+}
+
+.circle-container3 .color-circle.nine {
+    background-image: url('/html/img/3-9.avif');
+}
+
+
+.circle-container4 {
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+.circle-container4 .color-circle.one {
+    background-image: url('/html/img/4-1.avif');
+}
+
+.circle-container4 .color-circle.two {
+    background-image: url('/html/img/4-2.avif');
+}
+
+.circle-container4 .color-circle.three {
+    background-image: url('/html/img/4-3.avif');
+}
+
+
+
+.circle-container5 {
+    display: flex;
+    flex-wrap: wrap;
+
+
+}
+
+.circle-container5 .color-circle.one {
+    background-image: url('/html/img/5-1.avif');
+}
+
+.circle-container5 .color-circle.two {
+    background-image: url('/html/img/5-2.avif');
+}
+
+.circle-container5 .color-circle.three {
+    background-image: url('/html/img/5-3.avif');
+}
+
+
+.circle-container6 {
+    display: flex;
+    flex-wrap: wrap;
+
+
+}
+
+
+.circle-container6 .color-circle.one {
+    background-image: url('/html/img/6-1.avif');
+}
+
+.circle-container6 .color-circle.two {
+    background-image: url('/html/img/6-2.webp');
+}
+
+
+.swiper-slide {
+    display: inline-block;
+}
+
+.image-container2 {
+    position: relative;
+    display: inline-block;
+
+}
+
+.best-seller-label {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: #041e3a;
+    color: white;
+    font-size: 12px;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.image-container3 {
+    position: relative;
+    display: inline-block;
+
+}
+
+.new-label {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: #041e3a;
+    color: white;
+    font-size: 12px;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+
+.swiper-slide {
+    position: relative;
+}
+
+a {
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.color-options {
+    list-style: none;
+    padding: 0;
+    display: flex;
+
+}
+
+.color-options li {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    margin-top: 10px;
+    margin-right: 7px;
+    background-size: cover;
+    /* 이미지가 원 안에 꽉 차도록 설정 */
+    background-position: center;
+    /* 이미지가 중앙에 위치하도록 설정 */
+    border: 1px solid black;
+    margin-left: -2px;
+}
+
+/* 첫 번째 swiper-slide에만 왼쪽 마진 20px 추가 */
+.mySwiper2 .swiper-slide:first-child {
+    margin-left: 20px;
+}
+
+
+/* swiper의 기본 스타일 */
+.swiper {
+    width: 100%;
+    height: 100%;
+}
+
+/* mySwiper3 컨테이너에 배경 이미지 설정 */
+.mySwiper3 {
+    background-image: url('/html/img/키즈\ 더샵\ 배경.png');
+    /* 원하는 배경 이미지 */
+    background-size: cover;
+    /* 배경 이미지가 슬라이드 영역에 맞게 확대/축소 */
+    background-position: center;
+    /* 배경 이미지 중앙 정렬 */
+    height: 800px;
+    /* swiper 높이 설정 */
+    position: relative;
+    /* 슬라이드 위치를 조정할 수 있도록 설정 */
+    margin-top: 50px;
+}
+
+/* 첫 번째 swiper-slide에만 왼쪽 마진 20px 추가 */
+.mySwiper3 .swiper-slide:first-child {
+    margin-left: 20px;
+}
+
+.mySwiper3 .swiper-wrapper img {
+    width: 440px;
+    height: 560px;
+}
+
+
+.mySwiper3 .swiper-slide {
+    width: auto !important;
+    /* 슬라이드 크기를 내용에 맞게 */
+    margin: 0;
+    /* 불필요한 여백 제거 */
+    padding: 0;
+    /* 불필요한 패딩 제거 */
+    box-sizing: border-box;
+    /* 크기 계산 방식 통일 */
+    display: flex;
+    /* 플렉스 박스로 변경 */
+    align-items: center;
+    /* 수직 중앙 정렬 */
+    justify-content: center;
+    /* 수평 중앙 정렬 (필요한 경우) */
+    background-position: center;
+    /* 배경 이미지 중앙 정렬 */
+    background-repeat: no-repeat;
+    /* 배경 이미지 반복 제거 */
+    background-size: cover;
+    /* 배경 이미지가 슬라이드에 맞게 확대/축소 */
+    height: 100%;
+    /* 슬라이드 높이를 부모에 맞춤 */
+}
+
+/* 활성화된 슬라이드의 크기 초기화 */
+.mySwiper3 .swiper-slide-active {
+    transform: none !important;
+    /* Swiper의 크기 조정 무효화 */
+}
+
+/* 전체 Swiper 컨테이너의 크기 조정 */
+.mySwiper3 {
+    overflow: hidden;
+    /* 불필요한 공간 제거 */
+}
+
+.mySwiper3 .swiper-slide .text-container {
+    margin-left: 150px;
+    margin-right: 100px;
+}
+
+/* THE와 SHOPS 텍스트 스타일 */
+
+.mySwiper3 .swiper-slide .text-container p:first-child {
+    font-size: 40px;
+    /* 'the' 텍스트 크기 */
+    /* 글자 두껍게 */
+    color: white;
+    /* 글자 색상 */
+    text-align: left;
+    /* 가운데 정렬 */
+    margin-bottom: -5px;
+    font-family: "LeJeuneDeck-Regular";
+    
+}
+
+.mySwiper3 .swiper-slide .text-container p:nth-child(2) {
+    font-size: 65px;
+    /* 'SHOPS' 텍스트 크기 */
+    color: white;
+    /* 글자 색상 */
+    text-align: left;
+    /* 가운데 정렬 */
+    font-family: "LeJeuneDeck-Regular";
+
+}
+
+/* 시그니처 컬렉션 텍스트 스타일 */
+.mySwiper3 .swiper-slide .text-container p:nth-child(3) {
+    font-size: 18px;
+    /* 시그니처 컬렉션 텍스트 크기 */
+    color: white;
+    /* 글자 색상 */
+    text-align: left;
+    /* 가운데 정렬 */
+    font-family: "LeJeuneDeck-Regular";
+}
+
+/* 남아 쇼핑하기와 여아 쇼핑하기 버튼 스타일 */
+.shopping-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+    /* 상단 여백 */
+
+}
+
+.shopping-buttons span {
+    font-size: 15px;
+    /* 버튼 텍스트 크기 */
+    color: white;
+    /* 글자 색상 */
+    padding: 10px 0;
+    text-align: left;
+    width: 45%;
+    /* 버튼의 크기를 동일하게 설정 */
+    font-family: "LeJeuneDeck-Regular";
+}
+
+
+/* 버튼 호버 효과 */
+.shopping-buttons span:hover {
+    opacity: 0.7;
+}
+
+
+/* section-05 스타일 */
+.section-05 {
+    height: 800px;
+    position: relative;
+}
+
+.section-05 video {
+    width: 100%;
+    height: 800px;
+    object-fit: cover;
+   
+}
+
+.section-05 .text {
+    width: 1280px;
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    
+}
+
+.section-05 .text h2 {
+    font-size: 65px; 
+    color: white; /* 텍스트 색상 */
+    font-family: "LeJeuneDeck-Regular";
+   
+}
+
+.section-05 .text p{
+    font-size: 20px; 
+    color: white; /* 텍스트 색상 */
+    margin-top: 50px;
+    font-family: "LeJeuneDeck-Regular";
+}
+
+.section-05 .text a {
+    font-size: 20px; /* view more 텍스트 크기 */
+    color: white; /* 링크 색상 */
+    margin-top: 100px;
+    font-family: "LeJeuneDeck-Regular";
+}
+
+.section-05 .text a:hover {
+    text-decoration: underline; /* 호버 시 밑줄 추가 */
+}
+
+/* 섹션 가운데 정렬 */
+.section-05 {
+    text-align: center;
+    /* 텍스트 가운데 정렬 */
+
+}
+
+
+.section-05 h2 {
+    text-align: center;
+    font-size: 40px;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    font-family: 'SeoulNamsanM';
+}
+
+
+/* section-06 스타일 */
+.section-06 {
+    padding-top: 100px;
+}
+
+/* 쇼핑 카테고리 제목 */
+.section-06 h2 {
+    font-size: 30px;
+    margin-bottom: 30px;
+    text-align: center; /* 제목을 왼쪽으로 정렬 */
+    font-family: 'SeoulNamsanM';
+}
+
+/* 카테고리 컨테이너 */
+.category-container {
+    margin: 0 50px;
+    display: flex;
+    flex-wrap: wrap; /* 아이템들이 줄 바꿈되도록 설정 */
+    justify-content: flex-start; /* 아이템들을 왼쪽 정렬 */
+    gap: 20px; /* 아이템 간 간격 */
+}
+
+/* 개별 카테고리 아이템 */
+.category-item {
+    display: flex; /* 이미지와 텍스트를 세로로 배치 */
+    flex-direction: column; /* 세로 방향으로 이미지와 텍스트 배치 */
+    align-items: center; /* 아이템들을 가운데 정렬 */
+    width: calc(12.5% - 20px); /* 8개 아이템을 가로로 배치하기 위해 각 아이템의 너비를 12.5%로 설정 */}
+
+
+/* 개별 카테고리 아이템에 마우스를 올렸을 때 */
+.category-item:hover {
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2); /* 그림자 효과 */
+}
+
+
+.category-item img {
+    width: 90%;
+    height: auto;
+    border-radius: 8px; /* 이미지에 라운드 효과 추가 */
+}
+
+.category-item p {
+    font-size: 16px;
+    font-weight:600;
+    margin-top: 10px; /* 텍스트와 이미지 간 간격 */
+    text-align: center; /* 텍스트 가운데 정렬 */
+}
+
+
+/* section-07 스타일 */
+.section-07 {
+    height: 800px;
+    position: relative;
+    text-align: center;
+}
+
+.section-07 video {
+    width: 100%;
+    height: 800px;
+    object-fit: cover;
+    margin-bottom: 30px;
+    position: relative;
+    z-index: 1; /* video를 기본 레이어로 설정 */
+}
+
+.section-07 .text {
+    width: 1280px;
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 2; /* 텍스트가 동영상 위에 보이도록 설정 */
+}
+
+.section-07 h2 {
+    text-align: center;
+    font-size: 40px;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    font-family: 'SeoulNamsanM';
+}
+
+/* section-07 h4 스타일 */
+.section-07 .text h4 {
+    font-size: 65px !important; /* 기프트 제목 크기 */
+    margin-top: 50px !important; /* 위쪽 여백 */
+    margin-bottom: 20px !important; /* 아래쪽 여백 */
+    color: white !important; /* 글자 색상 */
+    text-align: center !important; /* 가운데 정렬 */
+    z-index: 3 !important; /* 다른 요소보다 위에 표시 */
+    position: relative !important; /* z-index가 제대로 적용되도록 position 추가 */
+    font-family: "LeJeuneDeck-Regular";
+}
+
+.section-07 .text p {
+    font-size: 20px;
+    color: white;
+    margin-top: 50px;
+    font-family: "LeJeuneDeck-Regular";
+}
+
+.section-07 .text a {
+    font-size: 20px;
+    color: white;
+    margin-top: 100px;
+    font-family: "LeJeuneDeck-Regular";
+}
+
+.section-07 .text a:hover {
+    text-decoration: underline;
+}
+
+/* mySwiper4 배경 설정 */
+.mySwiper4 {
+    background-image: url('/html/img/기프트\ 배경.png');
+    background-size: cover;
+    background-position: center;
+    height: 800px;
+    position: relative;
+    margin-top: 100px;
+    z-index: 0; /* swiper는 video와 텍스트보다 뒤에 배치 */
+}
+
+.mySwiper4 .swiper-wrapper img {
+    width: 440px;
+    height: 560px;
+}
+
+.mySwiper4 .swiper-slide {
+    width: auto !important;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+}
+
+/* 활성화된 슬라이드의 크기 초기화 */
+.mySwiper4 .swiper-slide-active {
+    transform: none !important;
+}
+
+
+.mySwiper4 .swiper-slide .text-container {
+    margin-left: 150px;
+    margin-right: 100px;
+}
+
+/* THE와 SHOPS 텍스트 스타일 */
+.mySwiper4 .swiper-slide .text-container p:first-child {
+    font-size: 40px;
+    font-weight: bold;
+    color: white;
+    text-align: left;
+}
+
+.mySwiper4 .swiper-slide .text-container p:nth-child(2) {
+    font-size: 65px;
+    font-weight: bold;
+    color: white;
+    text-align: left;
+}
+footer {
+    background-color: #f8f8f8;
+    margin-top: 80px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: nowrap; 
+}
+
+.footer-left {
+    display: flex;
+    gap: 40px;
+    width: 70%;
+    justify-content: space-between;
+}
+
+.footer-section {
+    width: 24%; /* 각 섹션의 너비를 설정 */
+    flex-shrink: 0; /* 섹션들이 줄어들지 않도록 설정 */
+}
+
+.footer-section h3 {
+    margin-bottom: 10px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.footer-section ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-section ul li {
+    font-size: 13px;
+    margin-bottom: 8px;
+}
+
+.footer-newsletter {
+    width: 400px;
+    padding: 0;
+    margin-left: 50px;
+  
+}
+
+.footer-newsletter h3 {
+    margin-bottom: 10px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.footer-newsletter input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+.footer-newsletter button {
+    width: 100%;
+    padding: 10px;
+    background-color: #041E3A;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.footer-newsletter button:hover {
+    background-color: rgb(31, 42, 114);
+}
+
+
+
+.footer-newsletter p {
+    margin-top: 20px;
+    font-size: 13px;
+    font-weight: normal;
+    margin-bottom: 70px;
+}
+
+/* 소셜 미디어 전체 스타일 */
+.footer-social {
+    text-align: center;
+    margin-bottom: 40px;
+    border-top: 1px solid #000; /* 구분선 추가 */
+    padding-top: 40px; /* 구분선과 내용 사이 여백 */
+}
+
+/* 리스트 스타일 */
+.footer-social ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center; /* 가운데 정렬 */
+    gap: 20px; /* 아이콘 간격 */
+}
+
+/* 이미지 크기 설정 */
+.footer-social ul li {
+    position: relative;
+    display: inline-block;
+    width: 40px; 
+    height: 40px;
+}
+
+
+/* 툴팁 기본 설정 (숨김) */
+.tooltip {
+    position: absolute;
+    bottom: -15px; /* 아래로 배치 */
+    left: 50%;
+    transform: translateX(-50%);
+    background: #041e3a; /* 배경색 */
+    color: #fff; /* 글자색 */
+    padding: 5px 10px;
+    border-radius: 5px; /* 둥근 모서리 */
+    font-size: 10px;
+    white-space: nowrap; /* 한 줄 유지 */
+    opacity: 0; /* 기본적으로 숨김 */
+    visibility: hidden; /* 화면에서 보이지 않게 설정 */
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+/* hover 시 툴팁 보이기 */
+.footer-social ul li:hover .tooltip {
+    opacity: 1;
+    visibility: visible;
+}
+
+
+/* 회사 정보 위 구분선 */
+.footer-info {
+    text-align: center;
+    font-size: 14px;
+    color: #666;
+    border-top: 1px solid #000; /* 구분선 추가 */
+    padding-top: 20px; /* 구분선과 내용 사이 여백 */
+}
+
+.footer-info p {
+    font-size: 10px;
+    margin: 5px 0;
+}
+
+/* 반응형 디자인 (모바일 대응) */
+@media screen and (max-width: 768px) {
+    .footer-links {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-section {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .footer-social ul {
+        flex-direction: column;
+    }
+}
+
+
+.footer-info p:nth-child(4) {
+    margin: 30px 0;
+}
+
+.footer-social img{
+    width: 18px;
+    height: 16px;
+}
+
