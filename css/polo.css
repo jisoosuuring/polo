@@ -254,7 +254,7 @@ body {
     position: relative;
     width: 100%;
     height: 800px;
-    background-image: url('/html/img/여성폴로배경.png');
+    background-image: url('../img/여성폴로배경.png');
     background-size: cover;
     background-position: center;
     z-index: 50;
@@ -527,39 +527,39 @@ body {
 
 
 .color-circle.one {
-    background-image: url('/html/img/1-1.avif');
+    background-image: url('../img/1-1.avif');
 }
 
 .color-circle.two {
-    background-image: url('/html/img/1-2.avif');
+    background-image: url('../img/1-2.avif');
 }
 
 .color-circle.three {
-    background-image: url('/html/img/1-3.jpg');
+    background-image: url('../img/1-3.jpg');
 }
 
 .color-circle.four {
-    background-image: url('/html/img/1-4.webp');
+    background-image: url('../img/1-4.webp');
 }
 
 .color-circle.five {
-    background-image: url('/html/img/1.5.webp');
+    background-image: url('../img/1.5.webp');
 }
 
 .color-circle.six {
-    background-image: url('/html/img/1-6.webp');
+    background-image: url('../img/1-6.webp');
 }
 
 .color-circle.seven {
-    background-image: url('/html/img/1-7.jpg');
+    background-image: url('../img/1-7.jpg');
 }
 
 .color-circle.eight {
-    background-image: url('/html/img/1-1.avif');
+    background-image: url('../img/1-1.avif');
 }
 
 .color-circle.nine {
-    background-image: url('/html/img/1-8.avif');
+    background-image: url('../img/1-8.avif');
 }
 
 
@@ -571,35 +571,35 @@ body {
 }
 
 .circle-container2 .color-circle.one {
-    background-image: url('/html/img/2-1.avif');
+    background-image: url('../img/2-1.avif');
 }
 
 .circle-container2 .color-circle.two {
-    background-image: url('/html/img/2-2.avif');
+    background-image: url('../img/2-2.avif');
 }
 
 .circle-container2 .color-circle.three {
-    background-image: url('/html/img/2-3.avif');
+    background-image: url('../img/2-3.avif');
 }
 
 .circle-container2 .color-circle.four {
-    background-image: url('/html/img/2-4.avif');
+    background-image: url('../img/2-4.avif');
 }
 
 .circle-container2 .color-circle.five {
-    background-image: url('/html/img/2-5.avif');
+    background-image: url('../img/2-5.avif');
 }
 
 .circle-container2 .color-circle.six {
-    background-image: url('/html/img/2-6.avif');
+    background-image: url('../img/2-6.avif');
 }
 
 .circle-container2 .color-circle.seven {
-    background-image: url('/html/img/2-7.avif');
+    background-image: url('../img/2-7.avif');
 }
 
 .circle-container2 .color-circle.eight {
-    background-image: url('/html/img/2-8.avif');
+    background-image: url('../img/2-8.avif');
 }
 
 
@@ -611,39 +611,39 @@ body {
 }
 
 .circle-container3 .color-circle.one {
-    background-image: url('/html/img/3-1.avif');
+    background-image: url('../img/3-1.avif');
 }
 
 .circle-container3 .color-circle.two {
-    background-image: url('/html/img/3-2.avif');
+    background-image: url('../img/3-2.avif');
 }
 
 .circle-container3 .color-circle.three {
-    background-image: url('/html/img/3-3.avif');
+    background-image: url('../img/3-3.avif');
 }
 
 .circle-container3 .color-circle.four {
-    background-image: url('/html/img/3-4.avif');
+    background-image: url('../img/3-4.avif');
 }
 
 .circle-container3 .color-circle.five {
-    background-image: url('/html/img/3-5.webp');
+    background-image: url('../img/3-5.webp');
 }
 
 .circle-container3 .color-circle.six {
-    background-image: url('/html/img/3-6.webp');
+    background-image: url('../img/3-6.webp');
 }
 
 .circle-container3 .color-circle.seven {
-    background-image: url('/html/img/3-7.webp');
+    background-image: url('../img/3-7.webp');
 }
 
 .circle-container3 .color-circle.eight {
-    background-image: url('/html/img/3-8.webp');
+    background-image: url('../img/3-8.webp');
 }
 
 .circle-container3 .color-circle.nine {
-    background-image: url('/html/img/3-9.avif');
+    background-image: url('../img/3-9.avif');
 }
 
 
@@ -654,15 +654,15 @@ body {
 }
 
 .circle-container4 .color-circle.one {
-    background-image: url('/html/img/4-1.avif');
+    background-image: url('../img/4-1.avif');
 }
 
 .circle-container4 .color-circle.two {
-    background-image: url('/html/img/4-2.avif');
+    background-image: url('../img/4-2.avif');
 }
 
 .circle-container4 .color-circle.three {
-    background-image: url('/html/img/4-3.avif');
+    background-image: url('../img/4-3.avif');
 }
 
 
@@ -675,15 +675,15 @@ body {
 }
 
 .circle-container5 .color-circle.one {
-    background-image: url('/html/img/5-1.avif');
+    background-image: url('../img/5-1.avif');
 }
 
 .circle-container5 .color-circle.two {
-    background-image: url('/html/img/5-2.avif');
+    background-image: url('../img/5-2.avif');
 }
 
 .circle-container5 .color-circle.three {
-    background-image: url('/html/img/5-3.avif');
+    background-image: url('../img/5-3.avif');
 }
 
 
@@ -696,11 +696,11 @@ body {
 
 
 .circle-container6 .color-circle.one {
-    background-image: url('/html/img/6-1.avif');
+    background-image: url('../img/6-1.avif');
 }
 
 .circle-container6 .color-circle.two {
-    background-image: url('/html/img/6-2.webp');
+    background-image: url('../img/6-2.webp');
 }
 
 
@@ -787,7 +787,7 @@ a {
 
 /* mySwiper3 컨테이너에 배경 이미지 설정 */
 .mySwiper3 {
-    background-image: url('/html/img/키즈\ 더샵\ 배경.png');
+    background-image: url('../img/키즈\ 더샵\ 배경.png');
     /* 원하는 배경 이미지 */
     background-size: cover;
     /* 배경 이미지가 슬라이드 영역에 맞게 확대/축소 */
@@ -1099,7 +1099,7 @@ a {
 
 /* mySwiper4 배경 설정 */
 .mySwiper4 {
-    background-image: url('/html/img/기프트\ 배경.png');
+    background-image: url('../img/기프트\ 배경.png');
     background-size: cover;
     background-position: center;
     height: 800px;
